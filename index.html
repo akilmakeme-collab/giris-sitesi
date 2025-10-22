@@ -1,0 +1,305 @@
+<!doctype html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Güncel Giriş - Basit Site</title>
+  <style>
+    :root{
+      --bg1: #0f172a;
+      --bg2: #071032;
+      --accent: #ff6b6b;
+      --accent-2: #7c5cff;
+      --card: rgba(255,255,255,0.04);
+      --muted: rgba(255,255,255,0.7);
+      --glass: rgba(255,255,255,0.03);
+      --radius: 12px;
+      --shadow: 0 10px 30px rgba(2,6,23,0.6);
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", Arial;
+    }
+
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      background: radial-gradient(1200px 600px at 10% 10%, rgba(124,92,255,0.12), transparent),
+                  radial-gradient(900px 500px at 90% 90%, rgba(255,107,107,0.06), transparent),
+                  linear-gradient(180deg, var(--bg1) 0%, var(--bg2) 100%);
+      color: #fff;
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      padding:32px;
+    }
+
+    .wrap{
+      width:100%;
+      max-width:920px;
+      background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+      border-radius:16px;
+      box-shadow:var(--shadow);
+      padding:28px;
+      display:flex;
+      gap:20px;
+      align-items:stretch;
+    }
+
+    /* left panel */
+    .left{
+      flex:1.1;
+      min-width:260px;
+      padding:28px;
+      border-radius:12px;
+      background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(0,0,0,0.03));
+      display:flex;
+      flex-direction:column;
+      justify-content:space-between;
+    }
+
+    .brand{
+      display:flex;
+      gap:14px;
+      align-items:center;
+    }
+    .logo{
+      width:56px;
+      height:56px;
+      border-radius:10px;
+      background:linear-gradient(135deg,var(--accent),var(--accent-2));
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      font-weight:700;
+      color:white;
+      font-size:20px;
+      box-shadow: 0 6px 20px rgba(124,92,255,0.12);
+    }
+    h1{
+      margin:0;
+      font-size:20px;
+      letter-spacing: -0.2px;
+    }
+    p.lead{
+      margin:14px 0 20px 0;
+      color:var(--muted);
+      line-height:1.45;
+      font-size:15px;
+    }
+
+    .info{
+      display:flex;
+      gap:12px;
+      flex-wrap:wrap;
+    }
+    .chip{
+      background:var(--glass);
+      color:#fff;
+      padding:8px 12px;
+      border-radius:999px;
+      font-size:13px;
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+      min-height:36px;
+    }
+
+    /* right panel */
+    .right{
+      width:320px;
+      min-width:240px;
+      padding:22px;
+      border-radius:12px;
+      background: linear-gradient(180deg, rgba(255,255,255,0.015), rgba(255,255,255,0.01));
+      display:flex;
+      flex-direction:column;
+      justify-content:center;
+      align-items:stretch;
+      gap:14px;
+    }
+
+    .card-title{
+      font-weight:600;
+      font-size:15px;
+      margin-bottom:6px;
+    }
+
+    .url-box{
+      display:flex;
+      gap:8px;
+      align-items:center;
+    }
+    .input-like{
+      flex:1;
+      background:var(--card);
+      border-radius:10px;
+      padding:12px 14px;
+      color:#fff;
+      font-size:14px;
+      border:1px solid rgba(255,255,255,0.03);
+      overflow:hidden;
+      text-overflow:ellipsis;
+      white-space:nowrap;
+    }
+
+    .btn{
+      background: linear-gradient(90deg,var(--accent),var(--accent-2));
+      color:white;
+      border:none;
+      padding:12px 16px;
+      border-radius:10px;
+      font-weight:700;
+      cursor:pointer;
+      box-shadow: 0 8px 24px rgba(124,92,255,0.16);
+      transition:transform .12s ease, filter .12s ease;
+    }
+    .btn:active{ transform: translateY(1px) }
+    .btn.secondary{
+      background:transparent;
+      border:1px solid rgba(255,255,255,0.06);
+      box-shadow:none;
+      font-weight:600;
+    }
+
+    .small{
+      font-size:13px;
+      color:var(--muted);
+    }
+
+    footer{
+      margin-top:14px;
+      font-size:13px;
+      color:rgba(255,255,255,0.6);
+    }
+
+    /* responsive */
+    @media (max-width:820px){
+      .wrap{flex-direction:column; padding:20px}
+      .right{width:100%}
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap" role="main" aria-labelledby="main-title">
+    <div class="left">
+      <div>
+        <div class="brand">
+          <div class="logo">G</div>
+          <div>
+            <h1 id="main-title">Grandpashabet Güncel Giriş</h1>
+            <div class="small">Güncel bağlantıya kolay ve hızlı erişim</div>
+          </div>
+        </div>
+
+        <p class="lead">
+          Platform zaman zaman erişim kısıtlarıyla karşılaşabiliyor. Aşağıdaki güncel giriş adresini kullanarak siteye hızlıca ulaşabilirsiniz. Butona tıklayarak yönlendirileceksiniz.
+        </p>
+
+        <div class="info" aria-hidden="false">
+          <span class="chip">7/24 Erişim</span>
+          <span class="chip">Güncel Adres</span>
+          <span class="chip">Güvenli Yönlendirme</span>
+        </div>
+      </div>
+
+      <footer>
+        <div><strong>Not:</strong> Bağlantı değişirse bu sayfada güncelleyebilirsiniz. Her zaman güvenli bağlantıları kullanın.</div>
+      </footer>
+    </div>
+
+    <div class="right" aria-label="Güncel giriş">
+      <div>
+        <div class="card-title">Güncel Giriş Adresi</div>
+
+        <!-- Bu alanı direkt link ile değiştir ya da veri-cekayt ile haga -->
+        <div class="url-box" role="region" aria-label="Giriş adresi">
+          <div id="currentUrl" class="input-like" title="Güncel adres">https://example.com/guncel-giris</div>
+          <button id="copyBtn" class="btn secondary" aria-label="Adresi kopyala">Kopyala</button>
+        </div>
+
+        <div style="height:12px"></div>
+
+        <button id="openBtn" class="btn" aria-label="Siteyi aç">Orijinal Siteye Git</button>
+
+        <p class="small" style="margin-top:8px">
+          Butona tıkladığınızda yeni pencerede orijinal site açılacaktır. Tarayıcınız açılış penceresini engellerse izin vermeniz gerekebilir.
+        </p>
+      </div>
+
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-top:8px;">
+        <div class="small">Son güncelleme: <span id="updated">—</span></div>
+        <div style="display:flex;gap:8px">
+          <button id="refreshBtn" class="btn secondary">Yenile</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // --- Ayarlar: varsayılan linki buradan değiştir ---
+    const defaultLink = "https://script.google.com/macros/s/AKfycbxGnkCdG6m8wDdlGGLW41YNRdp4GikbS8Mv6m5kQPD5ZvCDXQXyY4cCGogIUcxeiTND7A/exec";
+    // Eğer kendi gösterilecek adresin farklıysa burayı değiştir.
+
+    // Elementler
+    const currentUrl = document.getElementById('currentUrl');
+    const copyBtn = document.getElementById('copyBtn');
+    const openBtn = document.getElementById('openBtn');
+    const refreshBtn = document.getElementById('refreshBtn');
+    const updated = document.getElementById('updated');
+
+    // Başlangıç: gösterilecek adresi ayarla
+    function setUrl(url){
+      currentUrl.textContent = url;
+      currentUrl.title = url;
+      updated.textContent = (new Date()).toLocaleString();
+    }
+
+    setUrl(defaultLink);
+
+    // Kopyala
+    copyBtn.addEventListener('click', async () => {
+      try{
+        await navigator.clipboard.writeText(currentUrl.textContent);
+        copyBtn.textContent = "Kopyalandı ✓";
+        setTimeout(()=> copyBtn.textContent = "Kopyala", 1400);
+      }catch(e){
+        // fallback
+        const ta = document.createElement('textarea');
+        ta.value = currentUrl.textContent;
+        document.body.appendChild(ta);
+        ta.select();
+        try { document.execCommand('copy'); copyBtn.textContent = "Kopyalandı ✓"; }
+        catch(e){ alert("Kopyalama başarısız. Adresi manuel kopyalayın:\n\n" + currentUrl.textContent); }
+        ta.remove();
+        setTimeout(()=> copyBtn.textContent = "Kopyala", 1400);
+      }
+    });
+
+    // Siteyi aç (yeni sekme)
+    openBtn.addEventListener('click', () => {
+      const url = currentUrl.textContent.trim();
+      try {
+        window.open(url, "_blank", "noopener");
+      } catch(e){
+        window.location.href = url;
+      }
+    });
+
+    // Yenile (basit davranış: timestamp güncelle)
+    refreshBtn.addEventListener('click', () => {
+      // Eğer gerçek zamanlı güncel adres almak istersen,
+      // buraya fetch ile kendi sunucunu çağıran kod ekleyebilirsin.
+      updated.textContent = (new Date()).toLocaleString();
+      refreshBtn.textContent = "Güncellendi ✓";
+      setTimeout(()=> refreshBtn.textContent = "Yenile", 1200);
+    });
+
+    // Mobilde URL uzun ise kısaltılabilir (görsel olarak)
+    window.addEventListener('resize', () => {
+      // burayı daha gelişmiş yapmak istersen düzenleyebilirsin
+    });
+
+  </script>
+</body>
+</html>
